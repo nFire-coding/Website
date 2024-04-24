@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PRODOTTO - Nome Startup</title>
+<style>
+/* Reset CSS */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Impostazione del font per il corpo della pagina */
+    background-color: #f8f8f8; /* Impostazione del colore di sfondo della pagina */
+}
+
+.container {
+    max-width: 800px; /* Impostazione della larghezza massima del contenitore principale */
+    margin: 0 auto; /* Centratura del contenitore nella pagina */
+    padding: 20px; /* Aggiunta dello spazio interno al contenitore */
+    background-color: #fff; /* Impostazione del colore di sfondo del contenitore */
+    border-radius: 8px; /* Arrotondamento degli angoli del contenitore */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Aggiunta dell'ombra al contenitore */
+}
+
+.fade-in {
+    opacity: 0; /* Impostazione dell'opacità a 0 per nascondere gli elementi */
+    transform: translateY(100%); /* Traslazione degli elementi verso il basso */
+    animation: fadeIn 1s ease forwards; /* Aggiunta dell'animazione fadeIn */
+}
+
+.fade-in-delayed {
+    opacity: 0; /* Impostazione dell'opacità a 0 per nascondere gli elementi */
+    transform: translateY(100%); /* Traslazione degli elementi verso il basso */
+    animation: fadeIn 1s ease 2s forwards; /* Aggiunta dell'animazione fadeIn con ritardo */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Impostazione dell'opacità a 1 per mostrare gli elementi */
+        transform: translateY(0); /* Traslazione degli elementi verso l'alto */
+    }
+}
+
+.header {
+    text-align: center; /* Allineamento del testo al centro */
+    margin-bottom: 30px; /* Aggiunta dello spazio sotto all'intestazione */
+}
+
+.header h1 {
+    color: #333; /* Impostazione del colore del titolo */
+    font-size: 36px; /* Impostazione della dimensione del carattere del titolo */
+    font-weight: 700; /* Impostazione della grassetto del titolo */
+    margin-bottom: 10px; /* Aggiunta dello spazio sotto al titolo */
+}
+
+.header p {
+    color: #666; /* Impostazione del colore del testo */
+    font-size: 18px; /* Impostazione della dimensione del carattere del testo */
+}
+
+.product-list {
+    margin-top: 30px; /* Aggiunta dello spazio sopra all'elenco dei prodotti */
+}
+
+.product-item {
+    display: flex; /* Impostazione della visualizzazione come flessibile */
+    align-items: center; /* Allineamento degli elementi lungo l'asse trasversale */
+    margin-bottom: 20px; /* Aggiunta dello spazio sotto a ogni elemento prodotto */
+}
+
+.product-image {
+    flex: 0 0 30%; /* Impostazione della larghezza fissa per l'immagine del prodotto */
+    margin-right: 20px; /* Aggiunta dello spazio a destra dell'immagine del prodotto */
+}
+
+.product-image img {
+    max-width: 100%; /* Impostazione della larghezza massima dell'immagine al 100% */
+}
+
+.product-info {
+    flex: 1; /* Impostazione del rimanente spazio flessibile per le informazioni del prodotto */
+}
+
+.product-info h2 {
+    color: #333; /* Impostazione del colore del titolo */
+    font-size: 24px; /* Impostazione della dimensione del carattere del titolo */
+    font-weight: 700; /* Impostazione della grassetto del titolo */
+    margin-bottom: 10px; /* Aggiunta dello spazio sotto al titolo */
+}
+
+.product-info p {
+    color: #666; /* Impostazione del colore del testo */
+    font-size: 16px; /* Impostazione della dimensione del carattere del testo */
+    line-height: 1.6; /* Impostazione dell'altezza della riga */
+}
+
+.logo-btn {
+    position: fixed; /* Impostazione della posizione fissa per il pulsante */
+    bottom: 20px; /* Impostazione della distanza dal basso */
+    right: 20px; /* Impostazione della distanza da destra */
+    cursor: pointer; /* Impostazione del cursore come puntatore */
+}
+
+.logo-btn img {
+    width: 50px; /* Impostazione della larghezza dell'immagine del pulsante */
+    height: auto; /* Impostazione dell'altezza automatica dell'immagine del pulsante */
+    border-radius: 50%; /* Arrotondamento degli angoli dell'immagine */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Aggiunta dell'ombra all'immagine */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header fade-in">
+        <h1>PRODOTTO - Nome Startup</h1> <!-- Intestazione della pagina con il nome della startup -->
+        <p>Scopri le caratteristiche del nostro prodotto innovativo.</p> <!-- Breve descrizione del prodotto -->
+    </div>
+    <div class="product-list">
+        <div class="product-item fade-in-delayed">
+            <div class="product-image">
+                <img src="caratteristica1.png" alt="Caratteristica 1"> <!-- Immagine illustrativa della caratteristica 1 -->
+            </div>
+            <div class="product-info">
+                <h2>Caratteristica 1</h2> <!-- Titolo della caratteristica 1 -->
+                <p>Descrizione dettagliata della caratteristica 1 del nostro prodotto.</p> <!-- Descrizione della caratteristica 1 -->
+            </div>
+        </div>
+        <div class="product-item fade-in-delayed">
+            <div class="product-image">
+                <img src="caratteristica2.png" alt="Caratteristica 2"> <!-- Immagine illustrativa della caratteristica 2 -->
+            </div>
+            <div class="product-info">
+                <h2>Caratteristica 2</h2> <!-- Titolo della caratteristica 2 -->
+                <p>Descrizione dettagliata della caratteristica 2 del nostro prodotto.</p> <!-- Descrizione della caratteristica 2 -->
+            </div>
+        </div>
+        <div class="product-item fade-in-delayed">
+            <div class="product-image">
+                <img src="caratteristica3.png" alt="Caratteristica 3"> <!-- Immagine illustrativa della caratteristica 3 -->
+            </div>
+            <div class="product-info">
+                <h2>Caratteristica 3</h2> <!-- Titolo della caratteristica 3 -->
+                <p>Descrizione dettagliata della caratteristica 3 del nostro prodotto.</p> <!-- Descrizione della caratteristica 3 -->
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Pulsante del logo per tornare alla pagina principale -->
+<div class="logo-btn" onclick="window.location.href='sito.html'">
+    <img src="logo.png" alt="Logo"> <!-- Immagine del logo della startup -->
+</div>
+
+</body>
+</html>

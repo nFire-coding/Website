@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Navigabile</title>
+<style>
+/* Stile generale */
+body {
+    font-family: Arial, sans-serif; /* Impostazione del font per il testo del corpo della pagina */
+    margin: 0; /* Rimuove i margini predefiniti */
+    padding: 0; /* Rimuove i padding predefiniti */
+}
+
+.container {
+    max-width: 1200px; /* Imposta la larghezza massima del contenitore principale */
+    margin: 0 auto; /* Centra il contenitore nella pagina */
+    padding: 20px; /* Aggiunge spazio interno al contenitore */
+}
+
+header {
+    background-color: #333; /* Imposta il colore di sfondo dell'header */
+    color: #fff; /* Imposta il colore del testo dell'header */
+    padding: 10px 0; /* Aggiunge spazio interno all'header sopra e sotto */
+    display: flex; /* Imposta il display dell'header come flessibile */
+    justify-content: space-between; /* Allinea gli elementi dell'header ai lati opposti */
+    align-items: center; /* Allinea verticalmente gli elementi dell'header al centro */
+}
+
+.logo {
+    margin-left: 20px; /* Aggiunge uno spazio a sinistra del logo */
+}
+
+.menu {
+    margin-right: 20px; /* Aggiunge uno spazio a destra del menu di navigazione */
+}
+
+.menu a {
+    color: #fff; /* Imposta il colore del testo dei link del menu di navigazione */
+    text-decoration: none; /* Rimuove la sottolineatura dai link */
+    margin-left: 20px; /* Aggiunge uno spazio a sinistra dei link */
+    padding: 10px 20px; /* Aggiunge spazio interno ai link */
+    border-radius: 5px; /* Aggiunge un bordo arrotondato ai link */
+    transition: background-color 0.3s ease; /* Aggiunge un'animazione al passaggio del mouse sui link */
+    opacity: 0; /* Imposta l'opacità dei link a 0 per nasconderli inizialmente */
+    transform: translateY(100%); /* Trasla i link verso il basso */
+}
+
+.menu a.slide-up {
+    animation: slideUp 0.5s forwards; /* Aggiunge l'animazione di slide-up ai link */
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0; /* Imposta l'opacità iniziale a 0 */
+        transform: translateY(100%); /* Trasla i link verso il basso */
+    }
+    to {
+        opacity: 1; /* Imposta l'opacità finale a 1 */
+        transform: translateY(0); /* Trasla i link verso l'alto */
+    }
+}
+
+.menu a:hover {
+    background-color: #555; /* Cambia il colore di sfondo al passaggio del mouse sui link */
+}
+
+/* Pagina principale */
+.main-content {
+    padding: 20px; /* Aggiunge spazio interno al contenuto principale della pagina */
+}
+
+</style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="logo.png" alt="Logo Azienda"> <!-- Inserisce il logo dell'azienda -->
+    </div>
+    <nav class="menu">
+        <a href="idea" class="nav-link">IDEA</a> <!-- Link per la pagina "Idea" -->
+        <a href="prodotto" class="nav-link">PRODOTTO</a> <!-- Link per la pagina "Prodotto" -->
+        <a href="contatti" class="nav-link">CONTATTI</a> <!-- Link per la pagina "Contatti" -->
+    </nav>
+</header>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Funzione per gestire il cambio di pagina
+    function changePage(pageId) {
+        window.location.href = pageId + '.html'; /* Cambia la pagina corrente all'URL specificato */
+    }
+
+    // Aggiungi effetto di slide-up ai link di navigazione
+    var navLinks = document.querySelectorAll('.nav-link'); /* Seleziona tutti i link di navigazione */
+    navLinks.forEach(function(link, index) {
+        setTimeout(function() {
+            link.classList.add('slide-up'); /* Aggiungi la classe 'slide-up' ai link per applicare l'effetto di slide */
+        }, index * 500); /* Applica un ritardo crescente ai link per creare l'effetto di slide in sequenza */
+        link.addEventListener('click', function(e) {
+            e.preventDefault(); // Previeni il comportamento predefinito del link
+            var pageId = this.getAttribute('href'); // Ottieni l'URL della pagina
+            changePage(pageId); // Cambia pagina
+        });
+    });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IDEA - Nome Startup</title>
+<style>
+/* Reset CSS */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif; /* Impostazione del font per il corpo della pagina */
+    background-color: #f8f8f8; /* Impostazione del colore di sfondo della pagina */
+}
+
+.container {
+    max-width: 800px; /* Impostazione della larghezza massima del contenitore principale */
+    margin: 0 auto; /* Centratura del contenitore nella pagina */
+    padding: 20px; /* Aggiunta dello spazio interno al contenitore */
+    background-color: #fff; /* Impostazione del colore di sfondo del contenitore */
+    border-radius: 8px; /* Arrotondamento degli angoli del contenitore */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Aggiunta dell'ombra al contenitore */
+}
+
+.fade-in {
+    opacity: 0; /* Impostazione dell'opacità a 0 per nascondere gli elementi */
+    transform: translateY(100%); /* Traslazione degli elementi verso il basso */
+    animation: fadeIn 1s ease forwards; /* Aggiunta dell'animazione fadeIn */
+}
+
+.fade-in-delayed {
+    opacity: 0; /* Impostazione dell'opacità a 0 per nascondere gli elementi */
+    transform: translateY(100%); /* Traslazione degli elementi verso il basso */
+    animation: fadeIn 1s ease 2s forwards; /* Aggiunta dell'animazione fadeIn con ritardo */
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1; /* Impostazione dell'opacità a 1 per mostrare gli elementi */
+        transform: translateY(0); /* Traslazione degli elementi verso l'alto */
+    }
+}
+
+.header {
+    text-align: center; /* Allineamento del testo al centro */
+    margin-bottom: 30px; /* Aggiunta dello spazio sotto all'intestazione */
+}
+
+.header h1 {
+    color: #333; /* Impostazione del colore del titolo */
+    font-size: 36px; /* Impostazione della dimensione del carattere del titolo */
+    font-weight: 700; /* Impostazione della grassetto del titolo */
+    margin-bottom: 10px; /* Aggiunta dello spazio sotto al titolo */
+}
+
+.header p {
+    color: #666; /* Impostazione del colore del testo */
+    font-size: 18px; /* Impostazione della dimensione del carattere del testo */
+}
+
+.idea-details {
+    padding: 20px; /* Aggiunta dello spazio interno ai dettagli dell'idea */
+    border-top: 1px solid #ddd; /* Aggiunta di una linea sopra i dettagli dell'idea */
+}
+
+.idea-details h2 {
+    color: #333; /* Impostazione del colore del titolo */
+    font-size: 24px; /* Impostazione della dimensione del carattere del titolo */
+    font-weight: 700; /* Impostazione della grassetto del titolo */
+    margin-bottom: 15px; /* Aggiunta dello spazio sotto al titolo */
+}
+
+.idea-details p {
+    color: #666; /* Impostazione del colore del testo */
+    font-size: 16px; /* Impostazione della dimensione del carattere del testo */
+    line-height: 1.6; /* Impostazione dell'altezza della riga */
+    margin-bottom: 15px; /* Aggiunta dello spazio sotto al testo */
+}
+
+.idea-image {
+    margin-top: 30px; /* Aggiunta dello spazio sopra all'immagine dell'idea */
+    text-align: center; /* Allineamento del testo al centro */
+}
+
+.idea-image img {
+    max-width: 100%; /* Impostazione della larghezza massima dell'immagine al 100% */
+    border-radius: 8px; /* Arrotondamento degli angoli dell'immagine */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Aggiunta dell'ombra all'immagine */
+}
+
+.logo-btn {
+    position: fixed; /* Impostazione della posizione fissa per il pulsante */
+    bottom: 20px; /* Impostazione della distanza dal basso */
+    right: 20px; /* Impostazione della distanza da destra */
+    cursor: pointer; /* Impostazione del cursore come puntatore */
+}
+
+.logo-btn img {
+    width: 50px; /* Impostazione della larghezza dell'immagine del pulsante */
+    height: auto; /* Impostazione dell'altezza automatica dell'immagine del pulsante */
+    border-radius: 50%; /* Arrotondamento degli angoli dell'immagine */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Aggiunta dell'ombra all'immagine */
+}
+
+</style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header fade-in">
+        <h1>IDEA - Nome Startup</h1> <!-- Intestazione della pagina con il nome della startup -->
+        <p>Scopri la nostra idea innovativa che rivoluzionerà [settore di riferimento].</p> <!-- Breve descrizione dell'idea -->
+    </div>
+    <div class="idea-details fade-in-delayed">
+        <h2>Dettagli dell'Idea</h2> <!-- Sottotitolo per i dettagli dell'idea -->
+        <p>Nel mondo digitale in continuo sviluppo, riteniamo che [specificare il problema che si vuole risolvere] rappresenti un'opportunità unica per [nome startup]. La nostra soluzione innovativa mira a [descrivere il modo in cui l'idea affronta il problema] per fornire un servizio eccezionale ai nostri clienti.</p> <!-- Descrizione dei dettagli dell'idea -->
+        <p>Con il nostro approccio [specificare se c'è un approccio particolare che rende l'idea unica], crediamo di poter distinguerci sul mercato e raggiungere il successo.</p> <!-- Descrizione aggiuntiva dell'idea -->
+    </div>
+    <div class="idea-image fade-in-delayed">
+        <img src="idea.png" alt="Immagine Idea"> <!-- Immagine illustrativa dell'idea -->
+    </div>
+</div>
+
+<!-- Pulsante del logo per tornare alla pagina principale -->
+<div class="logo-btn" onclick="window.location.href='sito.html'">
+    <img src="logo.png" alt="Logo"> <!-- Immagine del logo della startup -->
+</div>
+
+</body>
+</html>
